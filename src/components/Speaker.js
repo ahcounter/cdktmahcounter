@@ -1,16 +1,18 @@
 import Fillerword from "./Fillerword";
+import Speakerdetails from "./Speakerdetails";
+import Addfillerword from "./Addfillerword";
 
 function Speaker(props) {
   return (
     <div className="speaker">
-		 <input type="text"  /> 
-       
-      <h3> {props.role} </h3>
+      <Speakerdetails id={props.id} />
+
       <div className="fillerwordgrid">
         {props.fillerwords.map((fillerword) => (
-          <Fillerword word={fillerword.word} />
+          <Fillerword speakerid={props.id} word={fillerword.word} />
         ))}
       </div>
+      <Addfillerword speakerid={props.id} />
     </div>
   );
 }

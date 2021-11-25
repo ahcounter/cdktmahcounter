@@ -5,7 +5,7 @@ import Addfillerword from "./Addfillerword";
 function Speaker(props) {
   return (
     <div className="speaker">
-      <Speakerdetails id={props.id} />
+      <Speakerdetails id={props.id} name={props.name} role={props.role}/>
 
       <div className="fillerwordgrid">
         {props.fillerwords.map((fillerword) => (

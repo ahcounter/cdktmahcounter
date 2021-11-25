@@ -3,17 +3,26 @@ import { createSlice } from "@reduxjs/toolkit";
 const meetingSlice = createSlice({
   name: "meeting",
   initialState: {
+    club: "CDK Hyderabad Toastmasters",
+    meetingid: 1,
     speakers: [],
   },
   reducers: {
+    updateClubName(state, action) {
+      state.club = action.payload.name;
+    },
+
+    updateMeetingnumber(state, action) {
+      state.meetingid = action.payload.meetingid;
+    },
+
     addSpeaker(state, action) {
       const newItem = action.payload;
 
       state.speakers.push({
-        id: newItem.id,
         name: newItem.name,
         role: newItem.role,
-        fillerwords: [],
+        fillerwords: newItem.fillerwords,
       });
     },
     deleteSpeaker(state, action) {
@@ -28,10 +37,16 @@ const meetingSlice = createSlice({
     },
 
     addNewFillerword(state, action) {
-      state.speakers[action.payload.id].fillerwords.push({
-        word: action.payload.newFillerword,
-        count: 0,
-      });
+      const existing = state.speakers[action.payload.id].fillerwords.filter(
+        (element) => element.word === action.payload.newFillerword
+      );
+
+      if (existing.length === 0) {
+        state.speakers[action.payload.id].fillerwords.push({
+          word: action.payload.newFillerword,
+          count: 0,
+        });
+      }
     },
 
     plusFillerwordcount(state, action) {

@@ -30,7 +30,7 @@ button {
 
 .speakergrid {
   display: grid;
-  grid-template-columns: repeat(4, 24%);
+  grid-template-columns: repeat(3, 32%);
   grid-auto-rows: auto;
 }
 

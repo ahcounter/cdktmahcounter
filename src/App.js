@@ -1,12 +1,12 @@
 import Speakergrid from "./components/Speakergrid";
-
+import Meeting from "./components/Meeting";
 
 
 
 function App() {
   return (
     <div>
-      <h1>Title 1</h1>
+      <Meeting/>
       <Speakergrid />
     </div>
   );

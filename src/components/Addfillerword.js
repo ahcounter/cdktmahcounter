@@ -2,6 +2,9 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { meetingActions } from "../store/meetingSlice";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import { Stack } from "@mui/material";
 
 function Addfillerword(props) {
   const dispatch = useDispatch();
@@ -25,15 +28,16 @@ function Addfillerword(props) {
   }
 
   return (
-    <div className="speaker">
-      <div>
-        <input
+    <div>
+      <Stack direction="row">
+        <TextField
           type="text"
+          size="small"
           value={newFillerword}
           onInput={changeNewFillerwordHandler}
         />
-        <button onClick={addNewFillerwordHandler}>Add word</button>
-      </div>
+        <Button size="small" variant="contained" onClick={addNewFillerwordHandler}>Add word</Button>
+      </Stack>
     </div>
   );
 }

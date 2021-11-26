@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { meetingActions } from "../store/meetingSlice";
@@ -36,7 +35,13 @@ function Addfillerword(props) {
           value={newFillerword}
           onInput={changeNewFillerwordHandler}
         />
-        <Button size="small" variant="contained" onClick={addNewFillerwordHandler}>Add word</Button>
+        <Button
+          size="small"
+          variant="contained"
+          onClick={addNewFillerwordHandler}
+        >
+          Add word
+        </Button>
       </Stack>
     </div>
   );

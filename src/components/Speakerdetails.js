@@ -57,7 +57,7 @@ function Speakerdetails(props) {
     "Spandan Satpathi",
     "Govind Krishna Somani",
     "Radha Ponnekanti",
-    "Gopi Perumalla"
+    "Gopi Perumalla",
   ].sort();
 
   return (

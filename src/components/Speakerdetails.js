@@ -85,7 +85,7 @@ function Speakerdetails(props) {
             )}
           />
 
-          <FormControl fillWidth>
+          <FormControl>
             <InputLabel>Role</InputLabel>
             <Select defaultValue="" label="Role" onChange={roleChangeHandler}>
               <ListSubheader color="primary">Role Payers</ListSubheader>

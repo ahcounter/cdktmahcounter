@@ -25,12 +25,6 @@ function Meeting(props) {
     );
   }
 
-  function formatFillerwords(fillerwords) {
-    return fillerwords
-      .filter((element) => element.count !== 0)
-      .sort((a, b) => b.count - a.count);
-  }
-
   function JSONtoReport(meeting) {
     var text;
     text = "Club: " + meeting.club + "\n";

@@ -1,5 +1,6 @@
 {
   "name": "Ah! Counter",
+  "homepage": "https://ahcounter.github.io/cdktmahcounter/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
